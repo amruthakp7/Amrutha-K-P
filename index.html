@@ -1,231 +1,599 @@
 <!doctype html>
 <html lang="en" style="scroll-behavior: smooth;">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Amrutha K P</title>
-    <link rel="icon" type="image/x-icon" href="https://media.licdn.com/dms/image/v2/D5603AQGEJuGRzH0WKA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725642754439?e=1785369600&v=beta&t=Fr5YN5J9eTIdDEmKK8aImQI4FsPL8GCclss7M9i8w3M">
+    <title>Amrutha K P | Geotechnical Engineer</title>
+    <link rel="icon" type="image/x-icon" href="https://media.licdn.com/dms/image/v2/D5603AQGEJuGRzH0WKA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725642754439?e=178536">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.1/font/bootstrap-icons.min.css">
-  </head>
-  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-  <body>
-    <header class="bg-info" style="position: fixed; width: 100%; z-index: 1;">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #18a2c5;
+            --primary-dark: #1478a1;
+            --secondary-color: #f8f9fa;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        header.bg-info {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%) !important;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        header h2 {
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .navbar-nav .nav-link {
+            margin: 0 10px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: white;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        #home-section {
+            padding-top: 8rem !important;
+            padding-bottom: 5rem !important;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        #home-section img {
+            border-radius: 20px;
+            box-shadow: var(--shadow-hover);
+            transition: transform 0.3s ease;
+            animation: slideInLeft 0.8s ease;
+        }
+
+        #home-section img:hover {
+            transform: translateY(-10px);
+        }
+
+        #home-section h4 {
+            font-weight: 700;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            animation: slideInRight 0.8s ease;
+        }
+
+        #home-section p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin: 1rem 0;
+        }
+
+        #home-section footer {
+            font-size: 1.1rem;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* About Section */
+        #aboutme-section {
+            padding: 5rem 0 !important;
+            background-color: var(--secondary-color);
+        }
+
+        #aboutme-section h2 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #aboutme-section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin: 1rem 0;
+        }
+
+        .card-text {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .card svg, .card i {
+            color: var(--primary-color);
+            margin: 1rem 0;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover svg, .card:hover i {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        /* Experiences Section */
+        #experiences-section {
+            padding: 5rem 0 !important;
+            background-color: white;
+        }
+
+        #experiences-section h2 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #experiences-section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        .card img {
+            height: 12rem;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        #contactme-section {
+            padding: 5rem 0 !important;
+            background: linear-gradient(135deg, #667eea 0%, var(--primary-color) 100%);
+        }
+
+        #contactme-section h2 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: white;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #contactme-section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: white;
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            border: none;
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            background-color: rgba(255, 255, 255, 0.95);
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(24, 162, 197, 0.2);
+            border-color: var(--primary-color);
+        }
+
+        .form-control::placeholder {
+            color: #bbb;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-dark) !important;
+            border: none;
+            border-radius: 10px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-color) !important;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Footer */
+        footer.bg-info {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%) !important;
+            padding: 2rem 0 !important;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        footer a:hover {
+            transform: scale(1.2) translateY(-5px);
+        }
+
+        footer svg {
+            width: 30px;
+            height: 30px;
+            transition: all 0.3s ease;
+        }
+
+        footer p {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            #home-section {
+                padding-top: 6rem !important;
+            }
+
+            #home-section h4 {
+                font-size: 1.5rem;
+            }
+
+            #home-section p {
+                font-size: 1rem;
+            }
+
+            #aboutme-section h2, #experiences-section h2, #contactme-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .navbar-nav .nav-link {
+                margin: 5px 0;
+            }
+
+            header {
+                position: sticky !important;
+                top: 0;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Link Styles */
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="bg-info" style="position: fixed; width: 100%; z-index: 1000;">
         <div class="row text-white">
-            <div class="col-md-6 col-9 p-3 pl-5">
+            <div class="col-md-6 col-9 p-3 pl-md-5 pl-3">
                 <h2>Amrutha K P</h2>
             </div>
-            <div class="col-md-6 my-auto ml-auto">
-                <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="col-md-6 my-auto">
+                <nav class="navbar navbar-expand-lg navbar-light p-0">
                     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
                     </button>
-                  
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                          <a class="nav-link text-white" href="#home-section">Home <span class="sr-only"></span></a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link text-white" href="#aboutme-section">About me</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link text-white" href="#experiences-section">Experiences</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link text-white" href="#contactme-section">Contact me</a>
-                        </li>
-                      </ul>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link text-white" href="#home-section">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#aboutme-section">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#experiences-section">Experience</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#contactme-section">Contact</a>
+                            </li>
+                        </ul>
                     </div>
-                  </nav>
+                </nav>
             </div>
         </div>
     </header>
-    <section class="text-center" id="home-section" style="padding-top: 7em;">
-      <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <img src="https://media.licdn.com/dms/image/v2/D5603AQGEJuGRzH0WKA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1725642754410?e=1765411200&v=beta&t=vg5vcl04mPob2owqv4Tt9HPNr-YRvtdzCxUFKFbYFJ8" alt="Image loading" width="50%" class="img-fluid rounded-circle">
-            </div>
-            <div class="col-md-6">
-                <h4 class="pt-4" style="color:rgb(24, 162, 197);">Geotechnical engineer<br>SYSTRA MVA  Consulting (India) Pvt. Ltd. </h4>
-                <p><i>"Optimizing the foundation for a sustainable tomorrow."</i></p>
-                <footer><i>- Amrutha K P</i></footer>
-              </div>
-        </div>
-      </div>
-    </section>
-    <section class="bg-light p-5" id="aboutme-section">
-      <div class="container">
-        <h2 class="text-center">About me</h2>
-        <div class="row">
-            <div class="col-md-4 mt-3">
-              <div class="card text-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
-                  <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z"/>
-                  <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z"/>
-                </svg>
-                <div class="card-body">
-                  <h5 class="card-title" style="color:rgb(24, 162, 197);">Master of Technology</h5>
-                  <a href="https://www.nitk.ac.in/" style="color:black">
-                  <p class="card-text">National Institute of Technology Karnataka, Surathkal - 2023</p>
-                </div>
-              </div>
-            </a>
-            </div>
-            <div class="col-md-4 mt-3">
-              <div class="card text-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
-                  <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z"/>
-                  <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z"/>
-                </svg>
-                <div class="card-body">
-                  <h5 class="card-title" style="color:rgb(24, 162, 197);">Bachelor of Technology</h5>
-                  <a href="https://nitc.ac.in/" style="color:black">
-                  <p class="card-text">National Institute of Technology Calicut, Kerala - 2021</p>
-                </div>
-              </div>
-            </a>
-            </div>
-            <div class="col-md-4 mt-3">
-              <div class="card text-center">
-                <i class="bi bi-book icon" style="font-size: 1.75rem;"></i> 
-                <div class="card-body">
-                  <h5 class="card-title" style="color:rgb(24, 162, 197);">Schooling</h5>
-                  <p class="card-text">GHSS Tirurangadi - 2016<br>MHSS Moonniyur - 2014</p>
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-      </div>
-    </section>
-    <section class="bg-white p-5" id="experiences-section">
-      <div class="container">
-        <h2 class="text-center">Experiences and Skills</h2>
-          <div class="row">
-            <div class="col-md-4 mt-3">
-              <div class="card text-center">
-                <img src="data:image/jpeg;base64,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" 
-                class="card-img-top" style="height:12em;" alt="">
-                <div class="card-body">
-                  <h5 class="card-title" style="color:rgb(24, 162, 197);">Geotechnical Engineer</h5>
-                  <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjroZK2_tSNAxWyUfUHHdKqB3UQFnoECBcQAQ&url=https%3A%2F%2Fwww.systra.com%2Findia%2F&usg=AOvVaw37mptN2y-4YGXTYA7pXwh6&opi=89978449" style="color:black">
-                  <p class="card-text">SYSTRA MVA  Consulting (India) Pvt. Ltd.t<br>
-                    Bengaluru, Karnataka, India<br>Full-time Jul 2023 - Present</p>
-                </div>
-              </div>
-            </a>
-            </div>
-            <div class="col-md-4 mt-3">
-              <div class="card text-center">
-                <img src="data:image/png;base64,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" 
-                class="card-img-top" style="height:12em;" alt="">
-                <div class="card-body">
-                  <h5 class="card-title" style="color:rgb(24, 162, 197);">Student Intern</h5>
-                  <a href="https://www.natpac.kerala.gov.in/" style="color:black">
-                  <p class="card-text">KSCSTE - National Transportation Planning and Research Centre (KSCSTE - NATPAC)<br><i>Internship</i>
-                    <br>
-                    Trivandrum, Kerala, India</p>
-                </div>
-              </div>
-            </a>
-            </div>
-            <div class="col-md-4 mt-3">
-              <div class="card text-center">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiJv4sA3rg0Gv8LWkAi6_4LXMnALXgV9Wu3g&s" 
-                class="card-img-top" style="height:12em;" alt="">
-                <div class="card-body">
-                  <h5 class="card-title" style="color:rgb(24, 162, 197);">Student Intern</h5>
-                  <a href="https://kshb.kerala.gov.in/en/home-2/" style="color:black">
-                  <p class="card-text">Kerala State Housing Board<br><i>Internship</i><br>
-                    Oct 2019 - Nov 2019<br>
-                    Kozhikode, Kerala, India</p>
-                </div>
-              </div>
-            </a>
-            </div>
-          </div>
-      </div>
-    </section>
-    <Section class="p-5 bg-light" id="contactme-section">
-      <div class="container">
-        <h2 class="text-center">Contact me</h2>
-        <div class="row">
-          <div class="col md 12">
-          <form action="https://script.google.com/macros/s/AKfycbxglrxSSqbZOl6Oo_tnJvMLy2W7DNtF4jPy6I1mI8Y9OixEqK8IB6uUI-wi3ECc3vzo/exec" method="POST">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="inputEmail4  col-md-6">Name</label>
-                <input type="text" class="form-control" id="inputEmail4" name="name" placeholder="Name">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="inputPassword4">Place</label>
-                <input type="text" class="form-control" id="inputPassword4" name="place" placeholder="Place">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="inputEmail4  col-md-6">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Email">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="inputPassword4">Mobile Number</label>
-                <input type="tel" class="form-control" id="inputPassword4" name="phone" placeholder="Mobile Number">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputAddress2">Message</label>
-              <textarea class="form-control" cols="30" rows="10" name="message" placeholder="Type your message here..."></textarea>
-            </div>
-            <!-- Optional: Honeypot to prevent spam -->
-            <input type="text" name="_honey" style="display:none">
-            <!-- Optional: No captcha -->
-            <input type="hidden" name="_captcha" value="false">
-            <!-- Optional: Redirect after submission-->
-            <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html"> -->
-            <div class="form-group text-center">
-            <button type="submit" class="btn btn-primary" style="width:100%;">Submit</button>
-          </div>
-          </form>
-        </div>
-        </div>
-      </div>
-    </Section>
 
-    <footer class="bg-info">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center text-white">
-            <a href="https://www.linkedin.com/in/amrutha-kp" target="_blank" rel="noopener noreferrer" title="Visit my LinkedIn profile">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                <rect width="16" height="16" fill="white" rx="3"/>
-                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-              </svg>
-            </a>
-            <!-- <div class="LI-profile-badge"  
-                data-version="v1" 
-                data-size="medium"
-                data-locale="en_US"
-                data-type="horizontal"
-                data-theme="light"
-                data-vanity="amrutha-kp">
-              <a class="LI-simple-link" href='https://in.linkedin.com/in/amrutha-kp?trk=profile-badge'>Amrutha K P</a>
-            </div> -->
-            <p style="text-align: center; padding: 10px; font-size: 14px; color: #fff;">© 2025 Amrutha K P. All rights reserved.</p>
-          </div>
+    <!-- Hero Section -->
+    <section class="text-center" id="home-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="https://media.licdn.com/dms/image/v2/D5603AQGEJuGRzH0WKA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1725642754410?e=1765411200&v=beta&t=vg5vcl0" alt="Amrutha K P" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h4 style="color: var(--primary-color);">
+                        Geotechnical Engineer<br>
+                        <span style="font-size: 1.4rem;">SYSTRA MVA Consulting (India) Pvt. Ltd.</span>
+                    </h4>
+                    <p><i>"Optimizing the foundation for a sustainable tomorrow."</i></p>
+                    <footer><i>- Amrutha K P</i></footer>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-light p-5" id="aboutme-section">
+        <div class="container">
+            <h2 class="text-center">About Me</h2>
+            <div class="row mt-5">
+                <!-- Master's Degree -->
+                <div class="col-md-4 mt-3">
+                    <div class="card text-center">
+                        <div class="card-body p-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
+                                <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917z"/>
+                                <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466z"/>
+                            </svg>
+                            <h5 class="card-title" style="color: var(--primary-color);">Master of Technology</h5>
+                            <p class="card-text">
+                                <a href="https://www.nitk.ac.in/" target="_blank" rel="noopener noreferrer">
+                                    National Institute of Technology Karnataka, Surathkal
+                                </a>
+                                <br><strong>2023</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bachelor's Degree -->
+                <div class="col-md-4 mt-3">
+                    <div class="card text-center">
+                        <div class="card-body p-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
+                                <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917z"/>
+                                <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466z"/>
+                            </svg>
+                            <h5 class="card-title" style="color: var(--primary-color);">Bachelor of Technology</h5>
+                            <p class="card-text">
+                                <a href="https://nitc.ac.in/" target="_blank" rel="noopener noreferrer">
+                                    National Institute of Technology Calicut, Kerala
+                                </a>
+                                <br><strong>2021</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Schooling -->
+                <div class="col-md-4 mt-3">
+                    <div class="card text-center">
+                        <div class="card-body p-4">
+                            <i class="bi bi-book" style="font-size: 2rem; color: var(--primary-color);"></i>
+                            <h5 class="card-title" style="color: var(--primary-color);">Schooling</h5>
+                            <p class="card-text">
+                                GHSS Tirurangadi – 2016<br>
+                                MHSS Moonniyur – 2014
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section class="bg-white p-5" id="experiences-section">
+        <div class="container">
+            <h2 class="text-center">Experiences & Skills</h2>
+            <div class="row mt-5">
+                <!-- Geotechnical Engineer -->
+                <div class="col-md-4 mt-3">
+                    <div class="card text-center">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0ODg4QEA8PDxAOEA8WEBAPDg8PFg8QGBcYGxYRFxYYHiwhGB8lGxUXIj0iMSorOi8uGB8zODMsNygtLisBCgoKDg0OGxAQGy0lICUtLS4rLS0tLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0v/wAARCABQAFADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWm5ygnJ2eoqOkpaanqKmqsrO0tba2uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba2uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//Z" class="card-img-top" alt="SYSTRA MVA">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: var(--primary-color);">Geotechnical Engineer</h5>
+                            <a href="https://www.systra.com/india/" target="_blank" rel="noopener noreferrer">
+                                <p class="card-text">
+                                    <strong>SYSTRA MVA Consulting (India) Pvt. Ltd.</strong><br>
+                                    Bengaluru, Karnataka, India<br>
+                                    <small>Full-time | Jul 2023 - Present</small>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Intern NATPAC -->
+                <div class="col-md-4 mt-3">
+                    <div class="card text-center">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABuVBMVEWb2OogL4L///+c2+qa2er///0gL4EWJ38gL4Rpb6HO7/D//v8AGXyY3O+ywtEEGnsAAADI8faswtUAAHBwcqDC7PMAAHYgLob2" class="card-img-top" alt="NATPAC">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: var(--primary-color);">Student Intern</h5>
+                            <a href="https://www.natpac.kerala.gov.in/" target="_blank" rel="noopener noreferrer">
+                                <p class="card-text">
+                                    <strong>KSCSTE - National Transportation Planning and Research Centre (NATPAC)</strong><br>
+                                    Trivandrum, Kerala, India<br>
+                                    <small>Internship</small>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Intern KSHB -->
+                <div class="col-md-4 mt-3">
+                    <div class="card text-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiJv4sA3rg0Gv8LWkAi6_4LXMnALXgV9Wu3g&s" class="card-img-top" alt="Kerala State Housing Board">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: var(--primary-color);">Student Intern</h5>
+                            <a href="https://kshb.kerala.gov.in/en/home-2/" target="_blank" rel="noopener noreferrer">
+                                <p class="card-text">
+                                    <strong>Kerala State Housing Board</strong><br>
+                                    Kozhikode, Kerala, India<br>
+                                    <small>Oct 2019 - Nov 2019</small>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="p-5" id="contactme-section">
+        <div class="container">
+            <h2 class="text-center">Get In Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 mt-4">
+                    <form action="https://script.google.com/macros/s/AKfycbxglrxSSqbZOl6Oo_tnJvMLy2W7DNtF4jPy6I1mI8Y9OixEqK8IB6uUI-wi3ECc3vzo/exec" method="POST">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="place">Place</label>
+                                <input type="text" class="form-control" id="place" name="place" placeholder="Your location" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="your.email@example.com" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="phone">Mobile Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="6" placeholder="Type your message here..." required></textarea>
+                        </div>
+                        <!-- Security -->
+                        <input type="text" name="_honey" style="display:none">
+                        <input type="hidden" name="_captcha" value="false">
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-info text-center text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 py-4">
+                    <a href="https://www.linkedin.com/in/amrutha-kp" target="_blank" rel="noopener noreferrer" title="Visit my LinkedIn profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <rect width="16" height="16" fill="white" rx="3"/>
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.887 0 1.438-.662 1.438-1.491.025-.848-.55-1.488-1.438-1.488-.887 0-1.438.64-1.438 1.488 0 .829.55 1.491 1.413 1.491h.025zm9.268 8.212V9.359c0-2.216-.979-3.646-2.687-3.646-1.235 0-1.978.811-2.334 1.596v-1.361h-2.142V13.42h2.142V9.75c0-.533.106-1.065.545-1.45.439-.385 1.142-.497 1.845-.497 1.302 0 1.828.883 1.828 2.176V13.42h2.142z"/>
+                        </svg>
+                    </a>
+                    <p class="mt-3">© 2025 Amrutha K P. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
-
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-      </body>
+</body>
 </html>
-
-
-
-
-
